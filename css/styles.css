@@ -13,7 +13,7 @@ body {
   --brand-color: #404bbf;
   --primary-fonts: "Roboto", sans-serif;
   --title-font: "Raleway", sans-serif;
-  --cornflower: #e7e9fc; 
+  --cornflower: #e7e9fc;
 }
 
 a {
@@ -41,7 +41,7 @@ img {
 }
 
 .container {
-  max-width: 1158;
+  max-width: 1158px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -74,6 +74,15 @@ img {
   align-items: center;
 }
 
+.container-header {
+  display: flex;
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+}
+
 .link-web {
   color: var(--button-color);
   font-family: var(--title-font);
@@ -96,7 +105,7 @@ img {
 }
 
 .nav-list {
-  display: inline-flex;
+  display: flex;
   align-items: flex-start;
   gap: 40px;
   margin-right: 332px;
@@ -113,6 +122,7 @@ img {
   line-height: 1.5;
   /* 150% */
   letter-spacing: 0.32px;
+  padding: 24px 0;
 }
 
 .link-nav:hover,
@@ -122,6 +132,11 @@ img {
 
 .address {
   font-style: normal;
+}
+
+.address-list {
+  display: flex;
+  gap: 40px;
 }
 
 .link-address {
@@ -146,6 +161,7 @@ img {
 
 .section-one {
   background-color: var(--nav-log-foot-color);
+  padding: 188px 0;
 }
 
 .title-one {
@@ -158,6 +174,7 @@ img {
   line-height: 1.07;
   /* 107.143% */
   letter-spacing: 1.12px;
+  max-width: 496px;
 }
 
 .btn-secton-one {
@@ -171,6 +188,11 @@ img {
   /* 150% */
   letter-spacing: 0.64px;
   cursor: pointer;
+  display: block;
+  min-width: 169px;
+  height: 56px;
+  border: none;
+  border-radius: 4px;
 }
 
 .btn-secton-one:hover,
@@ -180,16 +202,21 @@ img {
 
 /*сексія 2*/
 
-.title-two {
-  color: var(--nav-log-foot-color);
-  text-align: center;
-  font-family: var(--primary-fonts);
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 1.11;
-  /* 111.111% */
-  letter-spacing: 0.72px;
-  text-transform: capitalize;
+.section-two {
+  padding: 120px 0;
+}
+
+.title-three-section-two {
+  padding-bottom: 8px;
+}
+
+.section-two-list {
+  display: flex;
+  gap: 24px;
+}
+
+.section-two-list-element {
+  width: calc((100% - 72px) / 4);
 }
 
 .title-three {
@@ -218,20 +245,79 @@ img {
 
 /*секція 3*/
 
+.section-three {
+  padding-bottom: 120px;
+}
+
+.title-two {
+  color: var(--nav-log-foot-color);
+  text-align: center;
+  font-family: var(--primary-fonts);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  /* 111.111% */
+  letter-spacing: 0.72px;
+  text-transform: capitalize;
+}
+
+.title-two-section-three {
+  padding-bottom: 72px;
+}
+
+.list-section-three {
+  display: flex;
+  gap: 24px;
+}
+
+.list-section-three-element {
+  width: calc((100% - 48px) / 3);
+}
+
 /*секція 4*/
 
 .section-four {
   background-color: var(--classic-background-color);
+  padding: 120px 0;
 }
 
-.li-section-four {
+.title-two-section-four {
+  margin-bottom: 72px;
+}
+
+.list-section-four {
+  gap: 24px;
+}
+
+.list-section-four-element {
   background-color: var(--primary-wite-color);
+  width: calc((100% - 72px) / 4);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.div-element-section-four {
+  padding: 32px 0;
+}
+
+.title-three-section-four {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.paragraph-section-four {
+  text-align: center;
 }
 
 /*footer*/
 
 .footer {
   background-color: var(--nav-log-foot-color);
+  padding: 100px 0;
+}
+
+.link-web-footer {
+  display: inline-block;
+  margin-bottom: 16px;
 }
 
 .link-studio-footer {
@@ -254,8 +340,20 @@ img {
   letter-spacing: 0.32px;
 }
 
+/* portfolio */
+
 .main-portfolio {
   background-color: var(--primary-wite-color);
+  padding-top: 96px;
+  padding-bottom: 120px;
+
+}
+
+.list-main-portfolio {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 72px;
 }
 
 .btn-portfolio {
@@ -269,10 +367,32 @@ img {
   /* 150% */
   letter-spacing: 0.64px;
   cursor: pointer;
+  padding: 12px 24px;
+  border: 1px solid var(--cornflower);
+  border-radius: 4px;
 }
 
 .btn-portfolio:hover,
 .btn-portfolio:focus {
   background-color: var(--brand-color);
   color: var(--primary-wite-color);
+  border: 1px solid transparent;
+}
+
+.list-second-main-portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 48px;
+}
+
+.list-second-main-portfolio-element {
+  width: calc((100% - 48px) / 3);
+}
+
+.div-element-main-portfolio {
+  padding: 32px 16px;
+  border: 1px solid var(--cornflower);
+  border-top: none;
+  margin-bottom: 8px;
 }
